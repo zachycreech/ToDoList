@@ -1,0 +1,15 @@
+<%- include('header') -%>
+    <div class='box'>
+        <% for(var i=0; i<listItems.length; i++){ %>
+        <div class='item'>
+            <input type="checkbox">
+            <p><%=  listItems[i] %> </p>
+        </div>
+        <% } %>
+        <form action="/" method="POST" class="item">
+            <input type="text" name='listItems' placeholder="New Item" autocomplete="off">
+            <button type="submit" name="button">+</button>
+        </form>
+    
+    </div>
+    <%- include('footer') -%>
